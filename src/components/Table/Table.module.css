@@ -1,0 +1,18 @@
+.table{
+    table-layout: fixed;
+    border-collapse: collapse;
+  
+}
+.tbody td, .thead th{
+    border: 1px solid #666;
+    min-width: 60px;
+    height: 40px;
+}
+.thead th{
+    height: 60px;
+    background: #eee;
+}
+.tbody td:first-child{
+    background: #eee;
+
+}
