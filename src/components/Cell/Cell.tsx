@@ -1,13 +1,13 @@
 import React from 'react';
 import style from './Cell.module.css'
 export interface Props {
-  view?: String,
-  value?: String,
-  onChange?: (nextValue?: String) => void,
+  view?: string,
+  value?: string,
+  onChange?: (nextValue?: string) => void,
 }
 type State = {
   EditMode: boolean,
-  editValue: String
+  editValue: string
 }
 class Cell extends React.PureComponent<Props, State> {
   wrapDom: HTMLDivElement | null = null
