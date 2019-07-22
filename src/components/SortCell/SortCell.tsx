@@ -1,51 +1,55 @@
-import React from 'react';
-import style from './SortCell.module.css';
-type direction = 'up' | 'down' | void
+import React from "react";
+import style from "./SortCell.module.css";
+type direction = "up" | "down" | "normal";
 interface Props {
-  defaultValue?: direction,
-  onChange?: (direction: direction) => void
+  defaultValue?: direction;
+  onChange?: (direction: direction) => void;
 }
 type State = {
-  direction: direction
-}
+  direction: direction;
+};
 const getNextDirection = (current: direction): direction => {
   switch (current) {
-    case 'up':
-      return 'down';
-    case 'down':
-      return void 0;
-    case void 0:
-      return 'up'
+    case "up":
+      return "down";
+    case "down":
+      return "normal";
+    case "normal":
+      return "up";
     default:
-      console.error('uncatch direction: ' + current)
-      return void 0
-
+      console.error("uncatch direction: " + current);
+      return "normal";
   }
-}
-class SortCell extends React.PureComponent<Props, State>{
+};
+class SortCell extends React.PureComponent<Props, State> {
   constructor(props: Props) {
-    super(props)
+    super(props);
     this.state = {
-      direction: props.defaultValue
-    }
+      direction: props.defaultValue || "normal"
+    };
   }
 
   sortHandle = () => {
-    const nextDirection = getNextDirection(this.state.direction)
+    const nextDirection = getNextDirection(this.state.direction);
     this.setState({
       direction: nextDirection
-    })
+    });
     const { onChange } = this.props;
-    onChange && onChange(nextDirection)
-  }
+    onChange && onChange(nextDirection);
+  };
 
   render() {
-    const { direction } = this.state
-    return <div className={`${style.sortCell} ${direction ? style[direction] : ""}`} onClick={this.sortHandle}>
-      {this.props.children}
-      <span></span>
-    </div>
+    const { direction } = this.state;
+    return (
+      <div
+        className={`${style.sortCell} ${direction ? style[direction] : ""}`}
+        onClick={this.sortHandle}
+      >
+        {this.props.children}
+        <span />
+      </div>
+    );
   }
 }
 
-export default SortCell
+export default SortCell;
