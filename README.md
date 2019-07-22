@@ -48,6 +48,7 @@ https://manglobe.github.io/Excel-demo/build
   | -        | subtraction    | 2-1 => 1  |
   | \*       | multiplication | 2\*1 => 2 |
   | /        | division       | 4/2 => 2  |
+  | %        | mod            | 4%3 => 1  |
   | ^        | exponentiation | 4^2 => 16 |
 
 - need enter `=` as string: start with `'=`
