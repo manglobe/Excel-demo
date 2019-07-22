@@ -14,6 +14,10 @@ yarn start
 yarn build
 ```
 
+### online view
+
+https://manglobe.github.io/Excel-demo/build
+
 ## Support Feature
 
 - column & row sort
