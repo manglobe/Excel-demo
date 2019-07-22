@@ -54,7 +54,7 @@ https://manglobe.github.io/Excel-demo/build
 
 ## File Structure
 
-```js
+```
 
 |-- Excel-DEMO
     |-- .gitignore
