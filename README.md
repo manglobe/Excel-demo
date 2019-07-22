@@ -41,13 +41,15 @@ https://manglobe.github.io/Excel-demo/build
 
 - start calculate: enter word and start with `=`
 - support Operator:
-  |operator|descirption|example|
-  |:-:|:-|:-|
-  |+|addition|2+1 => 3|
-  |-|subtraction|2-1 => 1|
-  |\*|multiplication|2\*1 => 2|
-  |/|division|4/2 => 2|
-  |^|exponentiation|4^2 => 16|
+
+  | operator | descirption    | example   |
+  | -------- | -------------- | :-------- |
+  | +        | addition       | 2+1 => 3  |
+  | -        | subtraction    | 2-1 => 1  |
+  | \*       | multiplication | 2\*1 => 2 |
+  | /        | division       | 4/2 => 2  |
+  | ^        | exponentiation | 4^2 => 16 |
+
 - need enter `=` as string: start with `'=`
 
 ## File Structure
